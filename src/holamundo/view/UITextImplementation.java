@@ -5,6 +5,7 @@
  */
 package holamundo.view;
 
+import holamundo.controller.Model;
 import holamundo.controller.View;
 
 /**
@@ -12,6 +13,12 @@ import holamundo.controller.View;
  * @author 2dam
  */
 public class UITextImplementation implements View{
+
+    
+    public UITextImplementation(String saludo) {   
+        showGreeting(saludo);
+    }
+
 
     @Override
     public void showGreeting(String greeting){

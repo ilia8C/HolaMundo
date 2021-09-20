@@ -9,6 +9,7 @@ import holamundo.controller.Model;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Locale;
 import java.util.Properties;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -25,7 +26,7 @@ public class FicheroImplementation implements Model{
     
     @Override
     public String getGreeting() {
-        greetingFile = ResourceBundle.getBundle("greetingFile.properties");
+        greetingFile = ResourceBundle.getBundle("holamundo.model.greetingFile", new Locale("es"));
         saludo = greetingFile.getString("myGreeting");
         return saludo;       
     }
