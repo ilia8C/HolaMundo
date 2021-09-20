@@ -5,6 +5,8 @@
  */
 package holamundo;
 
+import holamundo.model.FicheroImplementation;
+
 /**
  *
  * @author 2dam
@@ -16,6 +18,8 @@ public class Application {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        FicheroImplementation ficheroImplementation = new FicheroImplementation();
     }
     
 }
