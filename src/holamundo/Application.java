@@ -15,7 +15,7 @@ import java.util.ResourceBundle;
 
 /**
  *
- * @author 2dam
+ * @author Ilia Consuegra y Alain Lozano
  */
 public class Application {
 

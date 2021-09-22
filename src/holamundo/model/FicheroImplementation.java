@@ -17,13 +17,17 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author 2dam
+ * @author Ilia Consuegra y Alain Lozano
  */
 public class FicheroImplementation implements Model{
 
     private ResourceBundle greetingFile;
     private String saludo = null;
     
+    /**
+     * 
+     * @return saludo
+     */
     @Override
     public String getGreeting() {
         greetingFile = ResourceBundle.getBundle("holamundo.model.greetingFile", new Locale("es"));

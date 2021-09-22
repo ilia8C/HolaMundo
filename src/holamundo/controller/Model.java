@@ -12,7 +12,7 @@ package holamundo.controller;
 public interface Model {
     /**
      * 
-     * @return 
+     * @return greeting 
      */
     public String getGreeting();
 }

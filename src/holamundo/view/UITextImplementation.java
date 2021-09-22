@@ -5,21 +5,26 @@
  */
 package holamundo.view;
 
-import holamundo.controller.Model;
 import holamundo.controller.View;
 
 /**
  *
- * @author 2dam
+ * @author Ilia Consuegra y Alain Lozano
  */
 public class UITextImplementation implements View{
 
-    
+    /**
+     * 
+     * @param saludo 
+     */
     public UITextImplementation(String saludo) {   
         showGreeting(saludo);
     }
 
-
+    /**
+     * 
+     * @param greeting 
+     */
     @Override
     public void showGreeting(String greeting){
         System.out.println(greeting);

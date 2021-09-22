@@ -10,7 +10,7 @@ import holamundo.view.UITextImplementation;
 
 /**
  *
- * @author HP
+ * @author Ilia Consuegra y Alain Lozano
  */
 public class Controller {
     Model model = new FicheroImplementation();

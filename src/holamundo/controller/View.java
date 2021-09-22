@@ -7,8 +7,13 @@ package holamundo.controller;
 
 /**
  *
- * @author 2dam
+ * @author Ilia Consuegra y Alain Lozano
  */
 public interface View {
+    /**
+     * 
+     * @param greeting
+     * @throws Exception 
+     */
     public void showGreeting(String greeting) throws Exception;
 }
