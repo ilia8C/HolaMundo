@@ -6,12 +6,7 @@
 package holamundo;
 
 import holamundo.controller.Controller;
-import holamundo.controller.Model;
-import holamundo.controller.View;
-import holamundo.model.FicheroImplementation;
-import holamundo.view.UITextImplementation;
-import java.util.Locale;
-import java.util.ResourceBundle;
+
 
 /**
  *
