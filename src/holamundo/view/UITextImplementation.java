@@ -12,15 +12,7 @@ import holamundo.controller.View;
  * @author Ilia Consuegra y Alain Lozano
  */
 public class UITextImplementation implements View{
-
-    /**
-     * 
-     * @param saludo 
-     */
-    public UITextImplementation(String saludo) {   
-        showGreeting(saludo);
-    }
-
+  
     /**
      * 
      * @param greeting 

@@ -7,13 +7,24 @@ package holamundo.controller;
 
 import holamundo.model.FicheroImplementation;
 import holamundo.view.UITextImplementation;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Ilia Consuegra y Alain Lozano
  */
 public class Controller {
-    Model model = new FicheroImplementation();
-    String saludo = model.getGreeting();
-    View text = new UITextImplementation(saludo);
+    /**
+     * 
+     * @param view
+     * @param model 
+     */
+    public void run(View view, Model model){
+        
+            String saludo = model.getGreeting();
+            view.showGreeting(saludo);
+            
+        
+    }
 }
