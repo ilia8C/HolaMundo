@@ -5,7 +5,8 @@
  */
 package holamundo.model;
 
-import holamundo.controller.Model;
+import holamundo.controller.View;
+import holamundo.view.UIJavaSwingImplementation;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -13,24 +14,23 @@ import static org.junit.Assert.*;
  *
  * @author 2dam
  */
-public class ModelFactoryTest {
+public class ViewFactoryTest {
     
     /**
      *
      */
-    public ModelFactoryTest() {
+    public ViewFactoryTest() {
     }
 
     /**
      *
      */
     @Test
-    public void testModelFactory() {
-    
-        ModelFactory model = new ModelFactory();
-        Model modelTest = model.getModel();
-        assertNotNull(modelTest);
-        assertTrue(modelTest instanceof DBImplementation);
+    public void tesViewFactory() {
+        ViewFactory view = new ViewFactory();
+        View viewTest = view.getView();
+        assertNotNull(viewTest);
+        assertTrue(viewTest instanceof UIJavaSwingImplementation);
     }
     
 }

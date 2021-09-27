@@ -20,6 +20,10 @@ public class ModelFactory {
     final String DB = "DB";
     Model model;
     
+    /**
+     *
+     * @return
+     */
     public Model getModel(){
  
         modelFactory = ResourceBundle.getBundle("holamundo.model.ConfigType", new Locale("es"));

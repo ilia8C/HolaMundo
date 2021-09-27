@@ -13,8 +13,8 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 /**
- *
- * @author 2dam
+ * Clase que permite abrir y cerrar una conexión con la base de datos greeting.
+ * @author Ilia Consuegra y Alain Lozano
  */
 public class ConnectionOpenClose {
     private ResourceBundle configFile;
@@ -22,6 +22,9 @@ public class ConnectionOpenClose {
     private String user;
     private String pass;
     
+    /**
+     * Constructor donde se inicializan las variables leídas desde el archivo de configuración.
+     */
     public ConnectionOpenClose(){
         configFile = ResourceBundle.getBundle("holamundo.model.DBConnection", new Locale("es"));
         url = configFile.getString("URL");
@@ -29,6 +32,11 @@ public class ConnectionOpenClose {
         pass = configFile.getString("DBPass");
     }
     
+    /**
+     * Método para abrir la conexión con los parámetros inicializados
+     * @return con
+     * @throws SQLException
+     */
     public Connection openConnection()throws SQLException{
         
         Connection con = null;
@@ -40,6 +48,12 @@ public class ConnectionOpenClose {
         return con;
     }
     
+    /**
+     * Método para cerrar la conexión si los parámetros de entrada no son nulos.
+     * @param stmt
+     * @param con
+     * @throws SQLException
+     */
     public void closeConnection(PreparedStatement stmt, Connection con) throws SQLException{
         
         if(stmt != null){

@@ -7,6 +7,7 @@ package holamundo.model;
 
 import holamundo.controller.Model;
 import holamundo.controller.View;
+import holamundo.view.UIJavaFXImplementation;
 import holamundo.view.UIJavaSwingImplementation;
 import holamundo.view.UITextImplementation;
 import java.util.Locale;
@@ -25,6 +26,10 @@ public class ViewFactory {
     private final String UIJAVAFX = "UIJAVAFX";
     View view;
     
+    /**
+     *
+     * @return
+     */
     public View getView() {
         
         viewFactory = ResourceBundle.getBundle("holamundo.model.ConfigType", new Locale("es"));
@@ -38,6 +43,7 @@ public class ViewFactory {
                 view = new UIJavaSwingImplementation();
                 break;
             case UIJAVAFX:
+                view = new UIJavaFXImplementation();
                 break;
             default:
                 break;

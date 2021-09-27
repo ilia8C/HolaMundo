@@ -7,26 +7,24 @@ package holamundo.model;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.junit.Ignore;
 
 /**
  *
  * @author Ilia Consuegra y Alain Lozano
  */
-public class FicheroImplementationTest {
-   /**
-    * Método para testear el método getGreeting de la implementación del fichero
+public class DBImplementationTest {
+
+    /**
+    * Método para testear el método getGreeting de la implementación de la base de datos
     */
     @Test
-    public void testGetGreeting() {
+    public void tesGetGreeting() {
         //Create object for testing
-        FicheroImplementation fichero = new FicheroImplementation();
+        DBImplementation db = new DBImplementation();
         //Call getGreeting method
-        String saludo = fichero.getGreeting();
+        String saludo = db.getGreeting();
         //Assert tahat greeting in what is supposed to be
         assertEquals(saludo, "Hola mundo");
     }
-    
-    
     
 }
