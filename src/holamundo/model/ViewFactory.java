@@ -5,7 +5,6 @@
  */
 package holamundo.model;
 
-import holamundo.controller.Model;
 import holamundo.controller.View;
 import holamundo.view.UIJavaFXImplementation;
 import holamundo.view.UIJavaSwingImplementation;
@@ -14,28 +13,30 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 /**
+ * Class for the view factory
  *
  * @author 2dam
  */
 public class ViewFactory {
 
-    private ResourceBundle viewFactory;
-    private String viewString;
-    private final String UITEXT = "UITEXT";
-    private final String UIJAVASWING = "UIJAVASWING";
-    private final String UIJAVAFX = "UIJAVAFX";
-    View view;
-    
     /**
+     * Method that returns the instantiated view by reading the configuration
+     * file
      *
-     * @return
+     * @return vista
      */
     public View getView() {
-        
+
+        ResourceBundle viewFactory;
+        String viewString;
+        final String UITEXT = "UITEXT";
+        final String UIJAVASWING = "UIJAVASWING";
+        final String UIJAVAFX = "UIJAVAFX";
+        View view = null;
         viewFactory = ResourceBundle.getBundle("holamundo.model.ConfigType", new Locale("es"));
         viewString = viewFactory.getString("vista");
-        
-        switch(viewString){
+
+        switch (viewString) {
             case UITEXT:
                 view = new UITextImplementation();
                 break;
@@ -50,5 +51,5 @@ public class ViewFactory {
         }
         return view;
     }
-    
+
 }

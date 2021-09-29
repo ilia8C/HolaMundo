@@ -9,25 +9,27 @@ import holamundo.controller.Model;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-
 /**
+ * Class for reading the file
  *
  * @author Ilia Consuegra y Alain Lozano
  */
-public class FicheroImplementation implements Model{
+public class FicheroImplementation implements Model {
 
-    private ResourceBundle greetingFile;
-    private String saludo = null;
-    
     /**
-     * 
+     * Method to read the file with the greeting and return the greeting in a
+     * String variable.
+     *
      * @return saludo
      */
     @Override
     public String getGreeting() {
+
+        ResourceBundle greetingFile;
+        String saludo = null;
         greetingFile = ResourceBundle.getBundle("holamundo.model.greetingFile", new Locale("es"));
         saludo = greetingFile.getString("myGreeting");
-        return saludo;       
+        return saludo;
     }
-    
+
 }

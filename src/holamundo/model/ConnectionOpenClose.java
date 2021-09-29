@@ -13,53 +13,55 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 /**
- * Clase que permite abrir y cerrar una conexión con la base de datos greeting.
+ * Class that allows opening and closing a connection to the greeting database.
+ *
  * @author Ilia Consuegra y Alain Lozano
  */
 public class ConnectionOpenClose {
-    private ResourceBundle configFile;
-    private String url;
-    private String user;
-    private String pass;
-    
+
+    private final ResourceBundle CONFIGFILE;
+    private final String URL;
+    private final String USER;
+    private final String PASS;
+
     /**
-     * Constructor donde se inicializan las variables leídas desde el archivo de configuración.
+     * Constructor where the variables read from the configuration file are
+     * initialized.
      */
-    public ConnectionOpenClose(){
-        configFile = ResourceBundle.getBundle("holamundo.model.DBConnection", new Locale("es"));
-        url = configFile.getString("URL");
-        user = configFile.getString("DBUser");
-        pass = configFile.getString("DBPass");
+    public ConnectionOpenClose() {
+        CONFIGFILE = ResourceBundle.getBundle("holamundo.model.DBConnection", new Locale("es"));
+        URL = CONFIGFILE.getString("URL");
+        USER = CONFIGFILE.getString("DBUser");
+        PASS = CONFIGFILE.getString("DBPass");
     }
-    
+
     /**
-     * Método para abrir la conexión con los parámetros inicializados
+     * Method for opening the connection with initialized parameters
+     *
      * @return con
      * @throws SQLException
      */
-    public Connection openConnection()throws SQLException{
-        
+    public Connection openConnection() throws Exception {
+
         Connection con = null;
-        try{
-            con = DriverManager.getConnection(url, user, pass);
-        }catch (SQLException e){
-            System.out.println((e.getMessage()));
-        }
+        con = DriverManager.getConnection(URL, USER, PASS);
+
         return con;
     }
-    
+
     /**
-     * Método para cerrar la conexión si los parámetros de entrada no son nulos.
+     * Method to close connection if input parameters are not null.
+     *
      * @param stmt
      * @param con
      * @throws SQLException
      */
-    public void closeConnection(PreparedStatement stmt, Connection con) throws SQLException{
-        
-        if(stmt != null){
+    public void closeConnection(PreparedStatement stmt, Connection con) throws SQLException {
+
+        if (stmt != null) {
             stmt.close();
         }
-        if(con != null){
+        if (con != null) {
             con.close();
         }
     }

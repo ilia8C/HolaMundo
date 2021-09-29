@@ -6,14 +6,17 @@
 package holamundo.controller;
 
 /**
- * Interfaz View
+ * View Interface
+ *
  * @author Ilia Consuegra y Alain Lozano
  */
 public interface View {
+
     /**
-     * Declaración del método showGretting para la implementación.
-     * Es un método void, no devuelve nada.
-     * @param greeting 
+     * Declaration of the showGretting method for the implementation. It is a
+     * void method, it does not return anything.
+     *
+     * @param greeting
      */
     public void showGreeting(String greeting);
 }

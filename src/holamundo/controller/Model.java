@@ -6,14 +6,16 @@
 package holamundo.controller;
 
 /**
- * Interfaz Model.
+ * Model Interface.
+ *
  * @author Ilia Consuegra y Alain Lozano
  */
 public interface Model {
+
     /**
-     * Declaración del método getGretting para la implementación.
-     * No tiene parámetros de entrada.
+     * Declaration of the getGretting method for the implementation. It has no
+     * input parameters.
      * @return greeting
      */
-    public String getGreeting();
+    public String getGreeting() throws Exception;
 }

@@ -8,18 +8,20 @@ package holamundo.view;
 import holamundo.controller.View;
 
 /**
+ * Class for console implementation
  *
  * @author Ilia Consuegra y Alain Lozano
  */
-public class UITextImplementation implements View{
-  
+public class UITextImplementation implements View {
+
     /**
-     * 
-     * @param greeting 
+     * Method to display by console the received greeting
+     *
+     * @param greeting
      */
     @Override
-    public void showGreeting(String greeting){
+    public void showGreeting(String greeting) {
         System.out.println(greeting);
     }
-    
+
 }

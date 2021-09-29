@@ -14,38 +14,42 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
+ * Class for reading the database
  *
  * @author Ilia Consuegra y Alain Lozano
  */
-public class DBImplementation implements Model{
+public class DBImplementation implements Model {
 
-    private Connection con;   
-    private ConnectionOpenClose connection = new ConnectionOpenClose();
-    private String saludo;
-    
-    final String GETGREETING = "SELECT * FROM greeting";
-    
-    
-    
+    /**
+     * Method that opens the connection, closes it with the database and reads
+     * the greeting from the greeting table and finally returns the greeting in
+     * String format.
+     *
+     * @return saludo
+     * @throws java.lang.Exception
+     */
     @Override
-    public String getGreeting() {
+    public String getGreeting() throws Exception {
+        final String GETGREETING = "SELECT * FROM greeting";
+        Connection con;
+        ConnectionOpenClose connection = new ConnectionOpenClose();
+        String saludo = null;
+
         ResultSet rs = null;
-        try {           
-            con = connection.openConnection();
-            
-            PreparedStatement stmt = con.prepareStatement(GETGREETING);
-            
-            rs = stmt.executeQuery();
-            
-            if(rs.next())
-                saludo = rs.getString("castellano");
-            
-            connection.closeConnection(stmt, con);
-            
-        } catch (SQLException ex) {
-            Logger.getLogger(DBImplementation.class.getName()).log(Level.SEVERE, null, ex);
+
+        con = connection.openConnection();
+
+        PreparedStatement stmt = con.prepareStatement(GETGREETING);
+
+        rs = stmt.executeQuery();
+
+        if (rs.next()) {
+            saludo = rs.getString("castellano");
         }
+
+        connection.closeConnection(stmt, con);
+
         return saludo;
     }
-    
+
 }

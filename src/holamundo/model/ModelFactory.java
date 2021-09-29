@@ -10,25 +10,29 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 /**
+ * Class for the model factory
  *
  * @author Ilia Consuegra y Alain Lozano
  */
 public class ModelFactory {
-    private ResourceBundle modelFactory;
-    private String modelString;
-    final String FICHERO = "FICHERO";
-    final String DB = "DB";
-    Model model;
-    
+
     /**
+     * Method that returns the instantiated model by reading the configuration
+     * file
      *
-     * @return
+     * @return modelo
      */
-    public Model getModel(){
- 
+    public Model getModel() {
+
+        ResourceBundle modelFactory;
+        String modelString;
+        final String FICHERO = "FICHERO";
+        final String DB = "DB";
+        Model model;
+
         modelFactory = ResourceBundle.getBundle("holamundo.model.ConfigType", new Locale("es"));
         modelString = modelFactory.getString("modelo");
-        switch(modelString){
+        switch (modelString) {
             case FICHERO:
                 model = new FicheroImplementation();
                 break;
@@ -39,7 +43,7 @@ public class ModelFactory {
                 model = null;
                 break;
         }
-        
+
         return model;
     }
 }

@@ -4,22 +4,25 @@
  * and open the template in the editor.
  */
 package holamundo.controller;
+
 /**
+ * Class to connect the interfaces to the application
  *
  * @author Ilia Consuegra y Alain Lozano
  */
 public class Controller {
+
     /**
-     * Como datos de entrada del método tenemos el modelo y la vista instanciados,
-     * el método run consigue el saludo del modelo de datos y lo manda a la vista.
+     * As input data of the method we have the model and the view instantiated,
+     * the run method gets the greeting from the data model and sends it to the
+     * view.
      * @param view
-     * @param model 
+     * @param model
      */
-    public void run(View view, Model model){
-        
+    public void run(View view, Model model) {
+
         String saludo = model.getGreeting();
         view.showGreeting(saludo);
-            
-        
+
     }
 }

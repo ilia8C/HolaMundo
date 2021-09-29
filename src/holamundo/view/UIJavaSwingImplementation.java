@@ -9,10 +9,11 @@ import holamundo.controller.View;
 import javax.swing.JOptionPane;
 
 /**
+ * Class for the implementation of JavaSwing
  *
- * @author 2dam
+ * @author Ilia Consuegra Alain Lozano
  */
-public class UIJavaSwingImplementation extends javax.swing.JFrame implements View{
+public class UIJavaSwingImplementation extends javax.swing.JFrame implements View {
 
     /**
      * Creates new form UIJavaSwingImplementation
@@ -35,26 +36,25 @@ public class UIJavaSwingImplementation extends javax.swing.JFrame implements Vie
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 300, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     /**
+     * Method that launches a JOptionPane with the greeting it receives.
+     *
+     * @param greeting
      */
-   
-
     @Override
     public void showGreeting(String greeting) {
         JOptionPane.showMessageDialog(this, greeting);
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    // End of variables declaration//GEN-END:variables
 }

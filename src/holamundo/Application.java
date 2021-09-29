@@ -11,41 +11,38 @@ import holamundo.controller.View;
 import holamundo.model.ModelFactory;
 import holamundo.model.ViewFactory;
 
-
 /**
  *
  * @author Ilia Consuegra y Alain Lozano
  */
 public class Application {
 
-    /** 
-     * Método main que ejecuta la aplicación
+    /**
+     * Main method that executes the application
+     *
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         /**
-         * Declaración e inicialización de las factorías del modelo y la vista
+         * Declaration and initialization of model and view factories
          */
         ModelFactory modelFactory = new ModelFactory();
         ViewFactory viewFactory = new ViewFactory();
-        
+
         /**
-         * Llamada al método getModel de la factoría de modelo y lo guardamos en
-         * una variable de tipo Model
-         * Llamada al método getView de la factoría de vista y lo guardamos en
-         * una variable de tipo View
+         * Call the getModel method of the model factory and store it in a
+         * variable of type Model. Call to the getView method of the view
+         * factory and store it in a variable of type View.
          */
         Model model = modelFactory.getModel();
         View view = viewFactory.getView();
-        
+
         /**
-         * Declaración e inicialización de la clase controlador
-         * Llamada al método run del controlador con los parámetros de entrada 
-         * view y model
+         * Declaration and initialization of the controller class. Call to the
+         * run method of the controller with input parameters view and model.
          */
         Controller controller = new Controller();
         controller.run(view, model);
     }
-   
-    
+
 }
