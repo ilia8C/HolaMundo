@@ -16,6 +16,7 @@ import org.junit.Ignore;
 public class FicheroImplementationTest {
    /**
     * Método para testear el método getGreeting de la implementación del fichero
+     * @throws java.lang.Exception
     */
     @Test
     public void testGetGreeting() throws Exception {
@@ -23,7 +24,7 @@ public class FicheroImplementationTest {
         FicheroImplementation fichero = new FicheroImplementation();
         //Call getGreeting method
         String saludo = fichero.getGreeting();
-        //Assert tahat greeting in what is supposed to be
+        //Assert that greeting is what is supposed to be
         assertEquals(saludo, "Hola mundo");
     }
     

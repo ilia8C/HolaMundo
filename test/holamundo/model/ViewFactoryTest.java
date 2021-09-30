@@ -6,7 +6,9 @@
 package holamundo.model;
 
 import holamundo.controller.View;
+import holamundo.view.UIJavaFXImplementation;
 import holamundo.view.UIJavaSwingImplementation;
+import holamundo.view.UITextImplementation;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -15,22 +17,38 @@ import static org.junit.Assert.*;
  * @author 2dam
  */
 public class ViewFactoryTest {
-    
-    /**
-     *
-     */
-    public ViewFactoryTest() {
-    }
+
 
     /**
      *
+     * @throws java.lang.Exception
      */
     @Test
-    public void tesViewFactory() throws Exception {
+    public void tesViewFactoryJavaSwing() throws Exception {
+        //Create object for testing
         ViewFactory view = new ViewFactory();
+        //Call getView method
         View viewTest = view.getView();
         assertNotNull(viewTest);
         assertTrue(viewTest instanceof UIJavaSwingImplementation);
+    }
+     @Test
+    public void tesViewFactoryJavaFX() throws Exception {
+        //Create object for testing
+        ViewFactory view = new ViewFactory();
+        //Call getView method
+        View viewTest = view.getView();
+        assertNotNull(viewTest);
+        assertTrue(viewTest instanceof UIJavaFXImplementation);
+    }
+     @Test
+    public void tesViewFactoryText() throws Exception {
+        //Create object for testing
+        ViewFactory view = new ViewFactory();
+        //Call getView method
+        View viewTest = view.getView();
+        assertNotNull(viewTest);
+        assertTrue(viewTest instanceof UITextImplementation);
     }
     
 }

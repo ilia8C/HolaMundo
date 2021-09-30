@@ -16,6 +16,7 @@ public class DBImplementationTest {
 
     /**
     * Método para testear el método getGreeting de la implementación de la base de datos
+     * @throws java.lang.Exception
     */
     @Test
     public void tesGetGreeting() throws Exception {
@@ -23,7 +24,7 @@ public class DBImplementationTest {
         DBImplementation db = new DBImplementation();
         //Call getGreeting method
         String saludo = db.getGreeting();
-        //Assert tahat greeting in what is supposed to be
+        //Assert that greeting is what is supposed to be
         assertEquals(saludo, "Hola mundo");
     }
     
