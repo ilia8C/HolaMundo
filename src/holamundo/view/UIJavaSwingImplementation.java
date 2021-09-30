@@ -6,6 +6,7 @@
 package holamundo.view;
 
 import holamundo.controller.View;
+import static java.lang.System.exit;
 import javax.swing.JOptionPane;
 
 /**
@@ -55,6 +56,7 @@ public class UIJavaSwingImplementation extends javax.swing.JFrame implements Vie
     @Override
     public void showGreeting(String greeting) {
         JOptionPane.showMessageDialog(this, greeting);
+        exit(0);
     }
 
 }

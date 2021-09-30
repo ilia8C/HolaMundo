@@ -12,7 +12,7 @@ import holamundo.model.ModelFactory;
 import holamundo.model.ViewFactory;
 
 /**
- *
+ * Main class
  * @author Ilia Consuegra y Alain Lozano
  */
 public class Application {
