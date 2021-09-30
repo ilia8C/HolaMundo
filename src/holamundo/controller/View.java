@@ -18,5 +18,5 @@ public interface View {
      *
      * @param greeting
      */
-    public void showGreeting(String greeting);
+    public void showGreeting(String greeting) throws Exception;
 }

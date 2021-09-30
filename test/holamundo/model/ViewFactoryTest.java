@@ -26,7 +26,7 @@ public class ViewFactoryTest {
      *
      */
     @Test
-    public void tesViewFactory() {
+    public void tesViewFactory() throws Exception {
         ViewFactory view = new ViewFactory();
         View viewTest = view.getView();
         assertNotNull(viewTest);

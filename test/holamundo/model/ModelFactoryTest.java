@@ -25,7 +25,7 @@ public class ModelFactoryTest {
      *
      */
     @Test
-    public void testModelFactory() {
+    public void testModelFactory() throws Exception {
     
         ModelFactory model = new ModelFactory();
         Model modelTest = model.getModel();

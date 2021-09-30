@@ -18,7 +18,7 @@ public class DBImplementationTest {
     * Método para testear el método getGreeting de la implementación de la base de datos
     */
     @Test
-    public void tesGetGreeting() {
+    public void tesGetGreeting() throws Exception {
         //Create object for testing
         DBImplementation db = new DBImplementation();
         //Call getGreeting method

@@ -18,7 +18,7 @@ public class FicheroImplementationTest {
     * Método para testear el método getGreeting de la implementación del fichero
     */
     @Test
-    public void testGetGreeting() {
+    public void testGetGreeting() throws Exception {
         //Create object for testing
         FicheroImplementation fichero = new FicheroImplementation();
         //Call getGreeting method

@@ -19,7 +19,7 @@ public class Controller {
      * @param view
      * @param model
      */
-    public void run(View view, Model model) {
+    public void run(View view, Model model) throws Exception {
 
         String saludo = model.getGreeting();
         view.showGreeting(saludo);

@@ -23,7 +23,7 @@ public class FicheroImplementation implements Model {
      * @return saludo
      */
     @Override
-    public String getGreeting() {
+    public String getGreeting() throws Exception{
 
         ResourceBundle greetingFile;
         String saludo = null;

@@ -22,7 +22,7 @@ public class ModelFactory {
      *
      * @return modelo
      */
-    public Model getModel() {
+    public Model getModel() throws Exception{
 
         ResourceBundle modelFactory;
         String modelString;

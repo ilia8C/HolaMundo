@@ -25,7 +25,7 @@ public class ViewFactory {
      *
      * @return vista
      */
-    public View getView() {
+    public View getView() throws Exception{
 
         ResourceBundle viewFactory;
         String viewString;

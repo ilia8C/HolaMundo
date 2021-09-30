@@ -19,20 +19,20 @@ import java.util.ResourceBundle;
  */
 public class ConnectionOpenClose {
 
-    private final ResourceBundle CONFIGFILE;
-    private final String URL;
-    private final String USER;
-    private final String PASS;
+    private ResourceBundle configFile;
+    private String url;
+    private String user;
+    private String pass;
 
     /**
      * Constructor where the variables read from the configuration file are
      * initialized.
      */
     public ConnectionOpenClose() {
-        CONFIGFILE = ResourceBundle.getBundle("holamundo.model.DBConnection", new Locale("es"));
-        URL = CONFIGFILE.getString("URL");
-        USER = CONFIGFILE.getString("DBUser");
-        PASS = CONFIGFILE.getString("DBPass");
+        configFile = ResourceBundle.getBundle("holamundo.model.DBConnection", new Locale("es"));
+        url = configFile.getString("URL");
+        user = configFile.getString("DBUser");
+        pass = configFile.getString("DBPass");
     }
 
     /**
@@ -44,7 +44,7 @@ public class ConnectionOpenClose {
     public Connection openConnection() throws Exception {
 
         Connection con = null;
-        con = DriverManager.getConnection(URL, USER, PASS);
+        con = DriverManager.getConnection(url, user, pass);
 
         return con;
     }
